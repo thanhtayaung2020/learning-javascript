@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1() {
+            var select = document.getElementById("selectbox");
+        alert(select.options[select.selectedIndex].value);
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="selectbox">
+        <option value="Simple Snippets">Simple Snippets</option>
+        <option value="Telusko Learning">Telusko Learning</option>
+        <option value="MKBHD">MKBHD</option>
+    </select>
+    <br>
+    <button onclick="fun1()">Click Me</button>
+</body>
+</html>
