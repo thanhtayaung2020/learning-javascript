@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeNew() {
+            document.getElementById("test").innerHTML = "This is new paragraph";
+        }
+
+        function changeOld() {
+            document.getElementById("test").innerHTML = "This is old paragraph";
+        }
+    </script>
+</head>
+<body>
+    <p id="test" onmouseover="changeNew()" onmouseout="changeOld()">This is old paragraph.</p>
+</body>
+</html>
