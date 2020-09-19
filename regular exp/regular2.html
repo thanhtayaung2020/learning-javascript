@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+            var name = document.getElementById("uname").value;
+            var regx = /E00/;
+            if(regx.test(name)) {
+                alert("Valid username");
+                document.getElementById("lblname").style.visibility="hidden";
+            }else {
+                //alert("invalid username");
+                document.getElementById("lblname").style.visibility = "visible";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="username" id="uname"><br>
+        <label id="lblname" style="color: red; visibility: hidden;">Invalid username</label><br>
+        <button type="button" onclick="validate()">Clicke Me</button>
+    </form>
+</body>
+</html>
