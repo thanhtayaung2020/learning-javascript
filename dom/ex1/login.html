@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function validate() {
+        var name = document.getElementById("name");
+        var pass = document.getElementById("password");
+
+        if(name.value.trim() == "") {
+            
+            document.getElementById("name").style.border="2px solid red";
+            document.getElementById("lblname").style.visibility="visible";
+
+            return false;
+        }else if(pass.value.trim() =="") {
+            pass.style.border = "2px solid red";
+            document.getElementById("lblpass").style.visibility="visible";
+            name.style.border = "1px solid black";
+            document.getElementById("lblname").style.visibility="hidden";
+            return false;
+        }
+        else {
+            return true;
+        }
+      }
+    </script>
+</head>
+<body>
+    <form action="welcome.html" onsubmit="return validate()">
+        <input type="text" id="name" placeholder="username">
+        <label for="" style="color: red; visibility: hidden;" id="lblname">username is required</label><br><br>
+        <input type="text" id="password" placeholder="password">
+        <label for="" style="color: red; visibility: hidden;" id="lblpass">password is required</label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
