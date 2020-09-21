@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+            var email = document.getElementById("email").value;
+            var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+            if(regx.test(email)) {
+                document.getElementById("lblemail").innerHTML="Valid";
+                document.getElementById("lblemail").style.color="green";
+                document.getElementById("lblemail").style.visibility="visible";
+            }else {
+
+                document.getElementById("lblemail").innerHTML="Invalid";
+                document.getElementById("lblemail").style.visibility="visible";
+                document.getElementById("lblemail").style.color="red";
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="email"><br>
+        <label for="" style="color:red; visibility: hidden;" id="lblemail">Invalid email</label>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>
